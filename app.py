@@ -26,7 +26,7 @@ prompt = PromptTemplate(
     {{
         "suggestion": "A positive alternative to replace the negative habit",
         "reason": "A brief explanation of why this alternative is beneficial",
-        "plan": "plan to achieve the suggestion"
+        "plan_of_action": "plan to achieve the suggestion"
     }}
 
     Remember to be supportive and encouraging in your suggestions, focusing on the potential for positive change rather than criticizing the current behavior.
@@ -42,6 +42,6 @@ prompt = PromptTemplate(
 chain = prompt | model | parser
 
 # And a query intented to prompt a language model to populate the data structure.
-query = "I drink alcohol daily."
+query = "I watch movies daily."
 
 print(chain.invoke({"query": query}))

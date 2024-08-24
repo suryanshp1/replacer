@@ -4,4 +4,4 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 class SuggestionResponse(BaseModel):
     suggestion: str = Field(description="positive suggestion for negative habits")
     reason: str = Field(description="reason for suggesting it")
-    plan: str = Field(description="plan to achieve the suggestion")
+    plan_of_action: str = Field(description="plan to achieve the suggestion")
